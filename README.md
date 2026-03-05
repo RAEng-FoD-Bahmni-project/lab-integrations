@@ -1,4 +1,11 @@
-# Lab Integrations — Bahmni RTL
+<div align="center">
+  <b>English</b> |
+  <a href="./README.ar.md">العربية</a>
+</div>
+
+---
+
+# Lab Integrations — Bahmni (Arabic)
 
 Middleware for connecting laboratory analyzer machines to Bahmni/OpenELIS. Results flow automatically from the analyzer into the patient record.
 
@@ -25,39 +32,5 @@ Lab Analyzer  ──HL7/TCP──▶  Middleware  ──SQL──▶  OpenELIS  
 See [MIDDLEWARE.md](MIDDLEWARE.md) for full details and setup instructions.
 
 ## License
-
-AGPL-3.0
-
----
-
-## العربية
-
-# تكامل المختبر — باهمني
-
-برنامج وسيط لربط أجهزة التحليل المخبرية بنظام باهمني/OpenELIS. تنتقل النتائج تلقائياً من جهاز التحليل إلى سجل المريض.
-
-```
-جهاز التحليل  ──HL7/TCP──▶  البرنامج الوسيط  ──SQL──▶  OpenELIS  ──▶  OpenMRS
-```
-
-## المحتويات
-
-| الملف | الوصف |
-|------|-------------|
-| `captureHl7Messages_final.rar` | الكود المصدري للبرنامج الوسيط (Java) |
-| `MIDDLEWARE.md` | التوثيق التقني ودليل الإعداد |
-
-## ملخص
-
-- خادم TCP بلغة Java — خيط استماع واحد لكل جهاز تحليل
-- يحلل رسائل HL7/ASTM باستخدام أنماط regex قابلة للتهيئة
-- يكتب النتائج مباشرة في قاعدة بيانات OpenELIS (PostgreSQL)
-- يوقّع النتائج تلقائياً ويحدّث حالة العينة
-- يحفظ رسائل HL7 الخام على القرص كسجل مرجعي
-- تم اختباره مع جهاز Sysmex XP-300 لتحليل الدم
-
-راجع [MIDDLEWARE.md](MIDDLEWARE.md) للتفاصيل الكاملة وتعليمات الإعداد.
-
-## الترخيص
 
 AGPL-3.0
